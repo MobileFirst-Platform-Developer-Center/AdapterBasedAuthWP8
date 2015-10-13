@@ -47,8 +47,8 @@ namespace AdapterBasedAuthWP8
             if (response == null ||
                 response.getResponseJSON() == null ||
                 response.getResponseText() == null ||
-                response.getResponseJSON()["authRequired"] == null ||
-                String.Compare(response.getResponseJSON()["authRequired"].ToString(), "false", StringComparison.OrdinalIgnoreCase) == 0)
+                response.getResponseJSON()["authStatus"] == null ||
+                String.Compare(response.getResponseJSON()["authStatus"].ToString(), "complete", StringComparison.OrdinalIgnoreCase) == 0)
             {
                 return false;
             }
